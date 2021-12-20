@@ -16,5 +16,11 @@ namespace JuegosDeDamas
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //evento cuando se toca sobre el tablero donde estan las fichas
+
+        }
     }
 }

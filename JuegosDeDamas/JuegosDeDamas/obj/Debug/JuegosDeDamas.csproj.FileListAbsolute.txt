@@ -1,0 +1,13 @@
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\bin\Debug\JuegosDeDamas.exe.config
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\bin\Debug\JuegosDeDamas.exe
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\bin\Debug\JuegosDeDamas.pdb
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\bin\Debug\BLL.dll
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\bin\Debug\BLL.pdb
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.csprojAssemblyReference.cache
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.Form1.resources
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.Properties.Resources.resources
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.csproj.GenerateResource.cache
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.csproj.CoreCompileInputs.cache
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.csproj.CopyComplete
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.exe
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\JuegosDeDamas\obj\Debug\JuegosDeDamas.pdb

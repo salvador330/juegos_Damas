@@ -1,0 +1,6 @@
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\DAL\bin\Debug\DAL.dll
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\DAL\bin\Debug\DAL.pdb
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\DAL\obj\Debug\DAL.dll
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\DAL\obj\Debug\DAL.pdb

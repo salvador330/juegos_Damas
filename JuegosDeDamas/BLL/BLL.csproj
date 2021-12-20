@@ -41,8 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Ficha.cs" />
+    <Compile Include="Jugada.cs" />
+    <Compile Include="Jugador.cs" />
+    <Compile Include="Mover.cs" />
+    <Compile Include="Permite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Realiza.cs" />
+    <Compile Include="Tablero.cs" />
+    <Compile Include="Turno.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

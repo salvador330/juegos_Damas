@@ -1,0 +1,9 @@
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\bin\Debug\BLL.dll
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\bin\Debug\BLL.pdb
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\bin\Debug\DAL.dll
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\bin\Debug\DAL.pdb
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\obj\Debug\BLL.dll
+C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\BLL\obj\Debug\BLL.pdb
