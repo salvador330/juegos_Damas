@@ -24,6 +24,19 @@ namespace BLL
             set { _estado = value; }
         }
 
+        public bool IniciarMatriz()
+        {
+            return true;
+        }
 
+        public bool ActualizarMatriz()
+        {
+            return true;
+        }
+
+        public List<int[,]> MostrarMatriz()
+        {
+            return MatrizdeJuego;
+        }
     }
 }

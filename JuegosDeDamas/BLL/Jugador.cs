@@ -37,7 +37,37 @@ namespace BLL
             set { _posicionCasillaFin = value; }
         }
 
+        public bool IniciarJuego()
+        {
 
+            return true;
+        }
+
+        public bool FinalizarJuego()
+        {
+            return true;
+        }
+
+
+        public bool SeleccionarCasillaFin()
+        {
+            return true;
+        }
+
+        public bool SeleccionarIniciodeFicha()
+        {
+            return true;
+        }
+
+        public bool RealizarJugada()
+        {
+            return true;
+        }
+
+        public bool ActualizarJuego()
+        {
+            return true;
+        }
 
     }
 }
