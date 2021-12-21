@@ -9,9 +9,15 @@ namespace BLL
     public class Jugador
     {
         private string _color;
-        private string _cantidadfichas;
+        private int _cantidadfichas;
         private int _posicionFichaInicio;
         private int _posicionCasillaFin;
+
+        public Jugador(string color)
+        {
+            this.Color = color;
+            this.CantidadFichas = 8;
+        }
 
         public string Color
         {
@@ -19,7 +25,7 @@ namespace BLL
             set { _color = value; }
         }
 
-        public string CantidadFichas
+        public int CantidadFichas
         {
             get { return _cantidadfichas; }
             set { _cantidadfichas = value; }
