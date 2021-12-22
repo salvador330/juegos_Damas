@@ -19,6 +19,11 @@ namespace BLL
             this.CantidadFichas = 8;
         }
 
+        public Jugador()
+        {
+
+        }
+
         public string Color
         {
             get { return _color; }

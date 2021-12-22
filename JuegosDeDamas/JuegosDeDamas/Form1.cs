@@ -24,7 +24,7 @@ namespace JuegosDeDamas
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            //evento cuando se toca sobre el tablero donde estan las fichas
+            //evento cuando se toca sobre las casillas 
            // MessageBox.Show("toco"+Form1.MousePosition.X);
             
         }
