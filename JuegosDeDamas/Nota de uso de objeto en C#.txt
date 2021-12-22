@@ -1,0 +1,5 @@
+PictureBox pb = (PictureBox)sender;
+string nombre = pb.Name;
+pb.BackColor = Color.White;
+pb.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
+MessageBox.Show("ficha"+ nombre);

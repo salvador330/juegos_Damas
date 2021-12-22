@@ -101,6 +101,22 @@ namespace JuegosDeDamas
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox65 = new System.Windows.Forms.PictureBox();
+            this.pictureBox66 = new System.Windows.Forms.PictureBox();
+            this.pictureBox67 = new System.Windows.Forms.PictureBox();
+            this.pictureBox68 = new System.Windows.Forms.PictureBox();
+            this.pictureBox69 = new System.Windows.Forms.PictureBox();
+            this.pictureBox70 = new System.Windows.Forms.PictureBox();
+            this.pictureBox71 = new System.Windows.Forms.PictureBox();
+            this.pictureBox72 = new System.Windows.Forms.PictureBox();
+            this.pictureBox73 = new System.Windows.Forms.PictureBox();
+            this.pictureBox74 = new System.Windows.Forms.PictureBox();
+            this.pictureBox75 = new System.Windows.Forms.PictureBox();
+            this.pictureBox76 = new System.Windows.Forms.PictureBox();
+            this.pictureBox77 = new System.Windows.Forms.PictureBox();
+            this.pictureBox78 = new System.Windows.Forms.PictureBox();
+            this.pictureBox79 = new System.Windows.Forms.PictureBox();
+            this.pictureBox80 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -165,6 +181,22 @@ namespace JuegosDeDamas
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -892,11 +924,203 @@ namespace JuegosDeDamas
             this.label6.TabIndex = 71;
             this.label6.Text = "0";
             // 
+            // pictureBox65
+            // 
+            this.pictureBox65.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox65.Location = new System.Drawing.Point(209, 72);
+            this.pictureBox65.Name = "pictureBox65";
+            this.pictureBox65.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox65.TabIndex = 72;
+            this.pictureBox65.TabStop = false;
+            this.pictureBox65.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox66
+            // 
+            this.pictureBox66.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox66.Location = new System.Drawing.Point(279, 142);
+            this.pictureBox66.Name = "pictureBox66";
+            this.pictureBox66.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox66.TabIndex = 73;
+            this.pictureBox66.TabStop = false;
+            this.pictureBox66.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox67
+            // 
+            this.pictureBox67.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox67.Location = new System.Drawing.Point(349, 72);
+            this.pictureBox67.Name = "pictureBox67";
+            this.pictureBox67.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox67.TabIndex = 74;
+            this.pictureBox67.TabStop = false;
+            this.pictureBox67.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox68
+            // 
+            this.pictureBox68.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox68.Location = new System.Drawing.Point(419, 142);
+            this.pictureBox68.Name = "pictureBox68";
+            this.pictureBox68.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox68.TabIndex = 75;
+            this.pictureBox68.TabStop = false;
+            this.pictureBox68.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox69
+            // 
+            this.pictureBox69.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox69.Location = new System.Drawing.Point(489, 72);
+            this.pictureBox69.Name = "pictureBox69";
+            this.pictureBox69.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox69.TabIndex = 76;
+            this.pictureBox69.TabStop = false;
+            this.pictureBox69.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox70
+            // 
+            this.pictureBox70.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox70.Location = new System.Drawing.Point(559, 142);
+            this.pictureBox70.Name = "pictureBox70";
+            this.pictureBox70.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox70.TabIndex = 77;
+            this.pictureBox70.TabStop = false;
+            this.pictureBox70.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox71
+            // 
+            this.pictureBox71.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox71.Location = new System.Drawing.Point(629, 72);
+            this.pictureBox71.Name = "pictureBox71";
+            this.pictureBox71.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox71.TabIndex = 78;
+            this.pictureBox71.TabStop = false;
+            this.pictureBox71.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox72
+            // 
+            this.pictureBox72.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox72.Location = new System.Drawing.Point(699, 142);
+            this.pictureBox72.Name = "pictureBox72";
+            this.pictureBox72.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox72.TabIndex = 79;
+            this.pictureBox72.TabStop = false;
+            this.pictureBox72.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox73
+            // 
+            this.pictureBox73.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox73.Location = new System.Drawing.Point(209, 492);
+            this.pictureBox73.Name = "pictureBox73";
+            this.pictureBox73.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox73.TabIndex = 80;
+            this.pictureBox73.TabStop = false;
+            this.pictureBox73.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox74
+            // 
+            this.pictureBox74.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox74.Location = new System.Drawing.Point(279, 562);
+            this.pictureBox74.Name = "pictureBox74";
+            this.pictureBox74.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox74.TabIndex = 81;
+            this.pictureBox74.TabStop = false;
+            this.pictureBox74.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox75
+            // 
+            this.pictureBox75.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox75.Location = new System.Drawing.Point(349, 492);
+            this.pictureBox75.Name = "pictureBox75";
+            this.pictureBox75.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox75.TabIndex = 82;
+            this.pictureBox75.TabStop = false;
+            this.pictureBox75.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox76
+            // 
+            this.pictureBox76.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox76.Location = new System.Drawing.Point(419, 562);
+            this.pictureBox76.Name = "pictureBox76";
+            this.pictureBox76.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox76.TabIndex = 83;
+            this.pictureBox76.TabStop = false;
+            this.pictureBox76.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox77
+            // 
+            this.pictureBox77.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox77.Location = new System.Drawing.Point(489, 492);
+            this.pictureBox77.Name = "pictureBox77";
+            this.pictureBox77.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox77.TabIndex = 84;
+            this.pictureBox77.TabStop = false;
+            this.pictureBox77.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox78
+            // 
+            this.pictureBox78.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox78.Location = new System.Drawing.Point(559, 562);
+            this.pictureBox78.Name = "pictureBox78";
+            this.pictureBox78.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox78.TabIndex = 85;
+            this.pictureBox78.TabStop = false;
+            this.pictureBox78.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox79
+            // 
+            this.pictureBox79.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox79.Location = new System.Drawing.Point(629, 492);
+            this.pictureBox79.Name = "pictureBox79";
+            this.pictureBox79.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox79.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox79.TabIndex = 86;
+            this.pictureBox79.TabStop = false;
+            this.pictureBox79.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
+            // pictureBox80
+            // 
+            this.pictureBox80.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox80.Location = new System.Drawing.Point(699, 562);
+            this.pictureBox80.Name = "pictureBox80";
+            this.pictureBox80.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox80.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox80.TabIndex = 87;
+            this.pictureBox80.TabStop = false;
+            this.pictureBox80.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox65_MouseClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 704);
+            this.Controls.Add(this.pictureBox80);
+            this.Controls.Add(this.pictureBox79);
+            this.Controls.Add(this.pictureBox78);
+            this.Controls.Add(this.pictureBox77);
+            this.Controls.Add(this.pictureBox76);
+            this.Controls.Add(this.pictureBox75);
+            this.Controls.Add(this.pictureBox74);
+            this.Controls.Add(this.pictureBox73);
+            this.Controls.Add(this.pictureBox72);
+            this.Controls.Add(this.pictureBox71);
+            this.Controls.Add(this.pictureBox70);
+            this.Controls.Add(this.pictureBox69);
+            this.Controls.Add(this.pictureBox68);
+            this.Controls.Add(this.pictureBox67);
+            this.Controls.Add(this.pictureBox66);
+            this.Controls.Add(this.pictureBox65);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
@@ -1038,6 +1262,22 @@ namespace JuegosDeDamas
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1117,6 +1357,22 @@ namespace JuegosDeDamas
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox65;
+        private System.Windows.Forms.PictureBox pictureBox66;
+        private System.Windows.Forms.PictureBox pictureBox67;
+        private System.Windows.Forms.PictureBox pictureBox68;
+        private System.Windows.Forms.PictureBox pictureBox69;
+        private System.Windows.Forms.PictureBox pictureBox70;
+        private System.Windows.Forms.PictureBox pictureBox71;
+        private System.Windows.Forms.PictureBox pictureBox72;
+        private System.Windows.Forms.PictureBox pictureBox73;
+        private System.Windows.Forms.PictureBox pictureBox74;
+        private System.Windows.Forms.PictureBox pictureBox75;
+        private System.Windows.Forms.PictureBox pictureBox76;
+        private System.Windows.Forms.PictureBox pictureBox77;
+        private System.Windows.Forms.PictureBox pictureBox78;
+        private System.Windows.Forms.PictureBox pictureBox79;
+        private System.Windows.Forms.PictureBox pictureBox80;
     }
 }
 
