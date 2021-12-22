@@ -17,6 +17,8 @@ namespace JuegosDeDamas
         {
             InitializeComponent();
         }
+        //variables auxiliares para timer
+        int tiempoParcialSegundos = 0, timepoParcialMinuto=0;
 
         Jugador JugadorRojo = new Jugador("Rojo");
         Jugador JugadorAzul = new Jugador("Azul");
@@ -37,7 +39,9 @@ namespace JuegosDeDamas
             //bloquear boton inicio
 
             PoblarTableroConFichas();
-
+            button1.Enabled = false;
+            timer1.Start();
+            JugadorRojo.IniciarJuego();
         }
 
         private void pictureBox65_MouseClick(object sender, MouseEventArgs e)
@@ -71,6 +75,19 @@ namespace JuegosDeDamas
             pictureBox78.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
             pictureBox79.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
             pictureBox80.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //realiza el conteo de segundo y minutos
+            label8.Text = tiempoParcialSegundos.ToString();
+            label4.Text = timepoParcialMinuto.ToString();
+            if (tiempoParcialSegundos >= 59)
+            {
+                tiempoParcialSegundos = 0;
+                timepoParcialMinuto++;
+            }
+            tiempoParcialSegundos++;
         }
     }
 }
