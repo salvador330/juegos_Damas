@@ -8,11 +8,11 @@ namespace BLL
 {
     public class Tablero
     {
-        private List<int[,]> _matrizdeJuego;
-        private bool _estado;
+        private int[,] _matrizdeJuego;
+        private bool _estado=false;
 
 
-        public List<int[,]> MatrizdeJuego
+        public int[,] MatrizdeJuego
         {
             get { return _matrizdeJuego; }
             set { _matrizdeJuego = value; }
@@ -26,15 +26,25 @@ namespace BLL
 
         public bool IniciarMatriz()
         {
+            this.Estado = true;
+            this.MatrizdeJuego = new int[8, 8] { { 1, 0, 1, 0, 1, 0, 1, 0 },
+                                                 { 0, 1, 0, 1, 0, 1, 0, 1 },
+                                                 { 0, 0, 0, 0, 0, 0, 0, 0 },
+                                                 { 0, 0, 0, 0, 0, 0, 0, 0 },
+                                                 { 0, 0, 0, 0, 0, 0, 0, 0 },
+                                                 { 0, 0, 0, 0, 0, 0, 0, 0 },
+                                                 { 2, 0, 2, 0, 2, 0, 2, 0 },
+                                                 { 0, 2, 0, 2, 0, 2, 0, 2 } };
             return true;
         }
 
-        public bool ActualizarMatriz()
+        public bool ActualizarMatriz(int x,int y,int ficha)
         {
+            this.MatrizdeJuego[x, y] = ficha;
             return true;
         }
 
-        public List<int[,]> MostrarMatriz()
+        public int[,] MostrarMatriz()
         {
             return MatrizdeJuego;
         }
