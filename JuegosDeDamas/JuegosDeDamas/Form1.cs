@@ -56,25 +56,28 @@ namespace JuegosDeDamas
 
         public void PoblarTableroConFichas()
         {
+            //direccion de imagenes
+            string direccionImagenes = @"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\";
+
             //POBLAMOS CON FICHAS ROJAS
-            pictureBox65.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
-            pictureBox66.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
-            pictureBox67.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
-            pictureBox68.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
-            pictureBox69.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
-            pictureBox70.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
-            pictureBox71.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
-            pictureBox72.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\Rojo.jpg");
+            pictureBox65.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            pictureBox66.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            pictureBox67.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            pictureBox68.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            pictureBox69.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            pictureBox70.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            pictureBox71.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            pictureBox72.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
 
             //POBLAMOS CON FICHAS AZULES
-            pictureBox73.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
-            pictureBox74.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
-            pictureBox75.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
-            pictureBox76.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
-            pictureBox77.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
-            pictureBox78.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
-            pictureBox79.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
-            pictureBox80.Image = Image.FromFile(@"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\azul.jpg");
+            pictureBox73.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            pictureBox74.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            pictureBox75.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            pictureBox76.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            pictureBox77.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            pictureBox78.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            pictureBox79.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            pictureBox80.Image = Image.FromFile(direccionImagenes + "azul.jpg");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
