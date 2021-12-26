@@ -8,12 +8,27 @@ namespace BLL
 {
     public class Jugador
     {
-        private string _color;
+        private int _color;
         private int _cantidadfichas;
         private int _posicionFichaInicio;
         private int _posicionCasillaFin;
+        private Tablero _tablero;
+        private Jugada _jugada;
 
-        public Jugador(string color)
+        public Jugada UnJugada
+        {
+            get { return _jugada; }
+            set { _jugada = value; }
+        }
+
+        public Tablero UnTablero
+        {
+            get { return _tablero; }
+            set { _tablero = value; }
+        }
+ 
+
+        public Jugador(int color)
         {
             this.Color = color;
             this.CantidadFichas = 8;
@@ -24,7 +39,7 @@ namespace BLL
 
         }
 
-        public string Color
+        public int Color
         {
             get { return _color; }
             set { _color = value; }
@@ -50,6 +65,7 @@ namespace BLL
 
         public bool IniciarJuego()
         {
+            UnTablero.IniciarMatriz();
 
             return true;
         }
@@ -65,7 +81,7 @@ namespace BLL
             return true;
         }
 
-        public bool SeleccionarIniciodeFicha()
+        public bool SeleccionarIniciodeFicha(int x,int y)
         {
             return true;
         }
