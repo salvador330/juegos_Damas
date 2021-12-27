@@ -17,6 +17,8 @@ namespace JuegosDeDamas
         {
             InitializeComponent();
         }
+        //variable inicio de juego
+        bool JuegoStart = false;
         //variables auxiliares para timer
         int tiempoParcialSegundos = 0, timepoParcialMinuto=0;
 
@@ -43,6 +45,7 @@ namespace JuegosDeDamas
             timer1.Start();
             JugadorRojo.IniciarJuego();
             UnTurno.IniciarContador();
+            JuegoStart = true;
         }
 
         private void pictureBox65_MouseClick(object sender, MouseEventArgs e)
@@ -52,14 +55,14 @@ namespace JuegosDeDamas
 
 
            
-            if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender))
+            if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
             {
                 //permitir mover las rojas
                 
                 UnTurno.CambiarEstado();
                 MessageBox.Show("toco roja");
             }
-            if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender))
+            if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender) && JuegoStart == true)
             {
                 //permite mover las azules
                 MessageBox.Show("toco auzul");
@@ -101,6 +104,7 @@ namespace JuegosDeDamas
             timer1.Enabled = false;
             button1.Enabled = true;
             tiempoParcialSegundos = 0; timepoParcialMinuto = 0;
+            JuegoStart = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
