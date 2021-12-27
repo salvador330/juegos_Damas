@@ -8,14 +8,14 @@ namespace BLL
 {
     public class Turno
     {
-        private Jugador jugador;
-        private string _horaInicio;
-        private string  _horaFin;
+
+        private int _horaInicio=0;
+        private int  _horaFin;
         private int _cantidadFichasJugadorRojo;
         private int _cantidadFichasJugadorAzul;
-        private bool _estado;
+        private int _estado;
 
-        public bool Estado
+        public int Estado
         {
             get { return _estado; }
             set { _estado = value; }
@@ -35,35 +35,40 @@ namespace BLL
         }
 
 
-        public string HoraFin    
+        public int HoraFin    
         {
             get { return _horaFin; }
             set { _horaFin = value; }
         }
 
-        public string HoraInicio
+        public int HoraInicio
         {
             get { return _horaInicio; }
-            set { _horaInicio = value; }
+            
         }
 
-        public Jugador Unjugador
-        {
-            get { return jugador; }
-            set { jugador = value; }
-        }
+     
 
         public bool IniciarContador()
         {
+            Estado = 1;
             return true;
         }
 
-        public bool CambiarEstado()
+        public int CambiarEstado()
         {
-            return true;
+            if (this.Estado==1)
+            {
+                this.Estado = 2;
+            }
+            else if (this.Estado==2)
+            {
+                this.Estado = 1;
+            }
+            return this.Estado;
         }
 
-        public bool IndicarEstado()
+        public int IndicarEstado()
         {
             return Estado;
         }

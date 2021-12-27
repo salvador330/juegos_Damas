@@ -20,14 +20,14 @@ namespace JuegosDeDamas
         //variables auxiliares para timer
         int tiempoParcialSegundos = 0, timepoParcialMinuto=0;
 
-        Jugador JugadorRojo = new Jugador("Rojo");
-        Jugador JugadorAzul = new Jugador("Azul");
-
+        Jugador JugadorRojo = new Jugador(1);
+        Jugador JugadorAzul = new Jugador(2);
+        Turno UnTurno = new Turno();
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             //realizo click sobre casilla 
-            MessageBox.Show("casilla");
+            
             
         }
 
@@ -42,14 +42,29 @@ namespace JuegosDeDamas
             button1.Enabled = false;
             timer1.Start();
             JugadorRojo.IniciarJuego();
+            UnTurno.IniciarContador();
         }
 
         private void pictureBox65_MouseClick(object sender, MouseEventArgs e)
         {
             //realizo click sobre ficha
             //obtengo nombre de ficha picturebox seleccionado
+
+
            
-            //MessageBox.Show("ficha");
+            if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender))
+            {
+                //permitir mover las rojas
+                
+                UnTurno.CambiarEstado();
+                MessageBox.Show("toco roja");
+            }
+            if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender))
+            {
+                //permite mover las azules
+                MessageBox.Show("toco auzul");
+                UnTurno.CambiarEstado();
+            }
             
         }
 
@@ -80,6 +95,14 @@ namespace JuegosDeDamas
             pictureBox80.Image = Image.FromFile(direccionImagenes + "azul.jpg");
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //finalizar juego
+            timer1.Enabled = false;
+            button1.Enabled = true;
+            tiempoParcialSegundos = 0; timepoParcialMinuto = 0;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             //realiza el conteo de segundo y minutos
@@ -91,6 +114,36 @@ namespace JuegosDeDamas
                 timepoParcialMinuto++;
             }
             tiempoParcialSegundos++;
+        }
+
+        public bool TocoFichaRoja(object ficha)
+        {
+            bool resultado = false;
+            PictureBox pb = (PictureBox)ficha;
+            string nombre = pb.Name;
+            if (pb.Name== "pictureBox65" || pb.Name == "pictureBox66"|| pb.Name == "pictureBox67"||
+                pb.Name == "pictureBox68"|| pb.Name == "pictureBox69"|| pb.Name == "pictureBox70"||
+                pb.Name == "pictureBox71"|| pb.Name == "pictureBox72")
+            {
+                resultado = true;
+            }
+
+            return resultado;
+        }
+
+        public bool TocoFichaAzul(object ficha)
+        {
+            bool resultado = false;
+            PictureBox pb = (PictureBox)ficha;
+            string nombre = pb.Name;
+            if (pb.Name == "pictureBox73" || pb.Name == "pictureBox74" || pb.Name == "pictureBox75" ||
+                pb.Name == "pictureBox76" || pb.Name == "pictureBox77" || pb.Name == "pictureBox78" ||
+                pb.Name == "pictureBox79" || pb.Name == "pictureBox80")
+            {
+                resultado = true;
+            }
+
+            return resultado;
         }
     }
 }

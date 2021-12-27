@@ -9,6 +9,14 @@ namespace BLL
     public class Jugada
     {
         private bool _movimientoEstado;
+        private Turno _turno;
+
+
+        public Turno UnTurno
+        {
+            get { return _turno; }
+            set { _turno = value; }
+        }
 
         public bool MovimientoEstado
         {
@@ -16,5 +24,7 @@ namespace BLL
             set { _movimientoEstado = value; }
         }
 
+
+        
     }
 }

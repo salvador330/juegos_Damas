@@ -12,8 +12,8 @@ namespace BLL
         private int _cantidadfichas;
         private int _posicionFichaInicio;
         private int _posicionCasillaFin;
-        private Tablero _tablero;
-        private Jugada _jugada;
+        private Tablero _tablero=new Tablero();
+        private Jugada _jugada=new Jugada();
 
         public Jugada UnJugada
         {
@@ -66,12 +66,13 @@ namespace BLL
         public bool IniciarJuego()
         {
             UnTablero.IniciarMatriz();
-
+          
             return true;
         }
 
-        public bool FinalizarJuego()
+        public bool FinalizarJuego(int fin)
         {
+            UnJugada.UnTurno.HoraFin = fin;
             return true;
         }
 
@@ -81,8 +82,10 @@ namespace BLL
             return true;
         }
 
-        public bool SeleccionarIniciodeFicha(int x,int y)
+        public bool SeleccionarIniciodeFicha(Ficha ficha)
         {
+            UnTablero.ActualizarMatriz(ficha.PosicionX, ficha.PosicionY, ficha.Color);
+
             return true;
         }
 

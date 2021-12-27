@@ -8,11 +8,11 @@ namespace BLL
 {
     public class Ficha
     {
-        private string _color;
+        private int _color;
         private int _posicionX;
         private int _posicionY;
 
-        public string Color
+        public int Color
         {
             get { return _color; }
             set { _color = value; }
