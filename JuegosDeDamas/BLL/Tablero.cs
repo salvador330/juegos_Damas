@@ -48,5 +48,12 @@ namespace BLL
         {
             return MatrizdeJuego;
         }
+
+        public int [,] MostrarMatrizConversion(int posX,int posY)
+        {
+            int[,] resultado;
+            resultado = this.MatrizdeJuego;
+            return resultado;
+        }
     }
 }

@@ -28,9 +28,16 @@ namespace JuegosDeDamas
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            //realizo click sobre casilla 
+
+            if (JuegoStart==true)
+            {
+                //realizo click sobre casilla 
+                PictureBox pb = (PictureBox)sender;
+                string nombre = pb.Name;
+                MessageBox.Show(nombre);
+            }
             
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,14 +65,19 @@ namespace JuegosDeDamas
             if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
             {
                 //permitir mover las rojas
-                
+
+                PictureBox pb = (PictureBox)sender;
+                string nombre = pb.Name;
+                MessageBox.Show(nombre);
                 UnTurno.CambiarEstado();
-                MessageBox.Show("toco roja");
+               
             }
             if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender) && JuegoStart == true)
             {
                 //permite mover las azules
-                MessageBox.Show("toco auzul");
+                PictureBox pb = (PictureBox)sender;
+                string nombre = pb.Name;
+                MessageBox.Show(nombre);
                 UnTurno.CambiarEstado();
             }
             
@@ -78,24 +90,24 @@ namespace JuegosDeDamas
             string direccionImagenes = @"C:\Users\Salvador.Cirino\Desktop\test\Juegos de Damas\juegos_Damas\JuegosDeDamas\";
 
             //POBLAMOS CON FICHAS ROJAS
-            pictureBox65.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
-            pictureBox66.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
-            pictureBox67.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
-            pictureBox68.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
-            pictureBox69.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
-            pictureBox70.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
-            pictureBox71.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
-            pictureBox72.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo65.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo66.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo67.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo68.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo69.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo70.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo71.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
+            rojo72.Image = Image.FromFile(direccionImagenes + "Rojo.jpg");
 
             //POBLAMOS CON FICHAS AZULES
-            pictureBox73.Image = Image.FromFile(direccionImagenes + "azul.jpg");
-            pictureBox74.Image = Image.FromFile(direccionImagenes + "azul.jpg");
-            pictureBox75.Image = Image.FromFile(direccionImagenes + "azul.jpg");
-            pictureBox76.Image = Image.FromFile(direccionImagenes + "azul.jpg");
-            pictureBox77.Image = Image.FromFile(direccionImagenes + "azul.jpg");
-            pictureBox78.Image = Image.FromFile(direccionImagenes + "azul.jpg");
-            pictureBox79.Image = Image.FromFile(direccionImagenes + "azul.jpg");
-            pictureBox80.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul73.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul74.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul75.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul76.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul77.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul78.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul79.Image = Image.FromFile(direccionImagenes + "azul.jpg");
+            azul80.Image = Image.FromFile(direccionImagenes + "azul.jpg");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -125,9 +137,9 @@ namespace JuegosDeDamas
             bool resultado = false;
             PictureBox pb = (PictureBox)ficha;
             string nombre = pb.Name;
-            if (pb.Name== "pictureBox65" || pb.Name == "pictureBox66"|| pb.Name == "pictureBox67"||
-                pb.Name == "pictureBox68"|| pb.Name == "pictureBox69"|| pb.Name == "pictureBox70"||
-                pb.Name == "pictureBox71"|| pb.Name == "pictureBox72")
+            if (pb.Name== "rojo65" || pb.Name == "rojo66" || pb.Name == "rojo67" ||
+                pb.Name == "rojo68" || pb.Name == "rojo69" || pb.Name == "rojo70" ||
+                pb.Name == "rojo71" || pb.Name == "rojo72")
             {
                 resultado = true;
             }
@@ -140,9 +152,9 @@ namespace JuegosDeDamas
             bool resultado = false;
             PictureBox pb = (PictureBox)ficha;
             string nombre = pb.Name;
-            if (pb.Name == "pictureBox73" || pb.Name == "pictureBox74" || pb.Name == "pictureBox75" ||
-                pb.Name == "pictureBox76" || pb.Name == "pictureBox77" || pb.Name == "pictureBox78" ||
-                pb.Name == "pictureBox79" || pb.Name == "pictureBox80")
+            if (pb.Name == "azul73" || pb.Name == "azul74" || pb.Name == "azul75" ||
+                pb.Name == "azul76" || pb.Name == "azul77" || pb.Name == "azul78" ||
+                pb.Name == "azul79" || pb.Name == "azul80")
             {
                 resultado = true;
             }

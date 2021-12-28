@@ -10,8 +10,10 @@ namespace BLL
     {
         private int _color;
         private int _cantidadfichas;
-        private int _posicionFichaInicio;
-        private int _posicionCasillaFin;
+        private int _posicionFichaInicioX;
+        private int _posicionFichaInicioY;
+        private int _posicionCasillaFinX;
+        private int _posicionCasillaFinY;
         private Tablero _tablero=new Tablero();
         private Jugada _jugada=new Jugada();
 
@@ -51,16 +53,28 @@ namespace BLL
             set { _cantidadfichas = value; }
         }
      
-        public int PosicionFichaInicio
+        public int PosicionFichaInicioX
         {
-            get { return _posicionFichaInicio; }
-            set { _posicionFichaInicio = value; }
+            get { return _posicionFichaInicioX; }
+            set { _posicionFichaInicioX = value; }
         }
 
-        public int PosicionCasillaFin
+        public int PosicionFichaInicioY
         {
-            get { return _posicionCasillaFin; }
-            set { _posicionCasillaFin = value; }
+            get { return _posicionFichaInicioY; }
+            set { _posicionFichaInicioY = value; }
+        }
+
+        public int PosicionCasillaFinX
+        {
+            get { return _posicionCasillaFinX; }
+            set { _posicionCasillaFinX = value; }
+        }
+
+        public int PosicionCasillaFinY
+        {
+            get { return _posicionCasillaFinY; }
+            set { _posicionCasillaFinY = value; }
         }
 
         public bool IniciarJuego()
@@ -77,8 +91,11 @@ namespace BLL
         }
 
 
-        public bool SeleccionarCasillaFin()
+        public bool SeleccionarCasillaFin(int posX, int posY)
         {
+            this.PosicionCasillaFinX = posX;
+            this.PosicionCasillaFinY = posY;
+
             return true;
         }
 
