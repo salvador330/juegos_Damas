@@ -6,3 +6,23 @@ MessageBox.Show("ficha"+ nombre);
 
 //obtener la posicion seleccionada en el formulario
 MessageBox.Show("casilla"+Form1.MousePosition.Y);
+
+
+if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
+            {
+                //permitir mover las rojas
+
+                PictureBox pb = (PictureBox)sender;
+                string nombre = pb.Name;
+                MessageBox.Show(nombre);
+                UnTurno.CambiarEstado();
+               
+            }
+            if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender) && JuegoStart == true)
+            {
+                //permite mover las azules
+                PictureBox pb = (PictureBox)sender;
+                string nombre = pb.Name;
+                MessageBox.Show(nombre);
+                UnTurno.CambiarEstado();
+            }

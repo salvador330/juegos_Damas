@@ -9,6 +9,7 @@ namespace BLL
     public class Jugador
     {
         private int _color;
+        private object _nombre;
         private int _cantidadfichas;
         private int _posicionFichaInicioX;
         private int _posicionFichaInicioY;
@@ -45,6 +46,12 @@ namespace BLL
         {
             get { return _color; }
             set { _color = value; }
+        }
+        
+        public object Nombre
+        {
+            get { return _nombre; }
+            set { _nombre = value; }
         }
 
         public int CantidadFichas

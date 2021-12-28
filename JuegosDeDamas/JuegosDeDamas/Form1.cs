@@ -29,12 +29,14 @@ namespace JuegosDeDamas
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
 
-            if (JuegoStart==true)
+            if (JuegoStart == true)
             {
                 //realizo click sobre casilla 
-                PictureBox pb = (PictureBox)sender;
-                string nombre = pb.Name;
-                MessageBox.Show(nombre);
+                PictureBox pb = (PictureBox)JugadorRojo.Nombre;
+                PictureBox aux = (PictureBox)sender;
+
+                pb.Size;
+
             }
             
 
@@ -59,26 +61,28 @@ namespace JuegosDeDamas
         {
             //realizo click sobre ficha
             //obtengo nombre de ficha picturebox seleccionado
+            PictureBox pb = (PictureBox)sender;
 
 
-           
             if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
             {
                 //permitir mover las rojas
-
-                PictureBox pb = (PictureBox)sender;
-                string nombre = pb.Name;
-                MessageBox.Show(nombre);
+               
+                JugadorRojo.PosicionFichaInicioX = pb.Location.X;
+                JugadorRojo.PosicionFichaInicioY = pb.Location.Y;
+                JugadorRojo.Nombre = sender;
                 UnTurno.CambiarEstado();
+         
                
             }
             if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender) && JuegoStart == true)
             {
                 //permite mover las azules
-                PictureBox pb = (PictureBox)sender;
-                string nombre = pb.Name;
-                MessageBox.Show(nombre);
+                JugadorAzul.PosicionFichaInicioX = pb.Location.X;
+                JugadorAzul.PosicionFichaInicioY = pb.Location.Y;
+                JugadorAzul.Nombre = sender;
                 UnTurno.CambiarEstado();
+                
             }
             
         }
