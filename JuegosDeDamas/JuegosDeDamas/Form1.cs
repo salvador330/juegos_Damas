@@ -32,10 +32,9 @@ namespace JuegosDeDamas
             if (JuegoStart == true)
             {
                 //realizo click sobre casilla 
-                PictureBox pb = (PictureBox)JugadorRojo.Nombre;
                 PictureBox aux = (PictureBox)sender;
 
-                pb.Size;
+                aux.Location = new Point(JugadorRojo.PosicionFichaInicioX, JugadorRojo.PosicionFichaInicioY);
 
             }
             

@@ -26,3 +26,7 @@ if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
                 MessageBox.Show(nombre);
                 UnTurno.CambiarEstado();
             }
+
+tranladar objeto
+PictureBox variable = (PictureBox)sender;
+variable.Location = new Point(Jugar.MoverFicha(ficha).GetPosicionX(), Jugar.MoverFicha(ficha).GetPosicionY());
