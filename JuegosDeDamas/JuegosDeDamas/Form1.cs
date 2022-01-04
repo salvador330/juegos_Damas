@@ -25,19 +25,40 @@ namespace JuegosDeDamas
         Jugador JugadorRojo = new Jugador(1);
         Jugador JugadorAzul = new Jugador(2);
         Turno UnTurno = new Turno();
+        
+
+        PictureBox poicionFicha;
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
+            //realizo click sobre casilla 
 
-            if (JuegoStart == true)
+            //debo validar si se puede mover la ficha
+            label25.Text = UnTurno.Estado.ToString();
+
+            if (JuegoStart == true && UnTurno.IndicarEstado() == 1 && 
+                JugadorRojo.UnJugada.MovimientoEstado(UnTurno.Estado,JugadorRojo.PosicionFichaInicioX,
+                JugadorRojo.PosicionFichaInicioY,JugadorRojo.PosicionCasillaFinX,
+                JugadorRojo.PosicionCasillaFinY)==true)
             {
-                //realizo click sobre casilla 
-                PictureBox aux = (PictureBox)sender;
 
-                aux.Location = new Point(JugadorRojo.PosicionFichaInicioX, JugadorRojo.PosicionFichaInicioY);
+                UnTurno.CambiarEstado();
+
+                poicionFicha.Location = new Point(JugadorRojo.PosicionFichaInicioX, JugadorRojo.PosicionFichaInicioY);
 
             }
-            
+
+            else if (JuegoStart == true && UnTurno.IndicarEstado() == 2 &&
+                JugadorAzul.UnJugada.MovimientoEstado(UnTurno.Estado, JugadorAzul.PosicionFichaInicioX,
+                JugadorAzul.PosicionFichaInicioY, JugadorAzul.PosicionCasillaFinX,
+                JugadorAzul.PosicionCasillaFinY) == true)
+            {
+
+                UnTurno.CambiarEstado();
+
+                poicionFicha.Location = new Point(JugadorAzul.PosicionFichaInicioX, JugadorAzul.PosicionFichaInicioY);
+
+            }
 
         }
 
@@ -60,27 +81,27 @@ namespace JuegosDeDamas
         {
             //realizo click sobre ficha
             //obtengo nombre de ficha picturebox seleccionado
-            PictureBox pb = (PictureBox)sender;
-
+            poicionFicha = (PictureBox)sender;
+            label25.Text = UnTurno.Estado.ToString();
 
             if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
             {
                 //permitir mover las rojas
                
-                JugadorRojo.PosicionFichaInicioX = pb.Location.X;
-                JugadorRojo.PosicionFichaInicioY = pb.Location.Y;
+                JugadorRojo.PosicionFichaInicioX = poicionFicha.Location.X;
+                JugadorRojo.PosicionFichaInicioY = poicionFicha.Location.Y;
                 JugadorRojo.Nombre = sender;
-                UnTurno.CambiarEstado();
+                
          
                
             }
             if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender) && JuegoStart == true)
             {
                 //permite mover las azules
-                JugadorAzul.PosicionFichaInicioX = pb.Location.X;
-                JugadorAzul.PosicionFichaInicioY = pb.Location.Y;
+                JugadorAzul.PosicionFichaInicioX = poicionFicha.Location.X;
+                JugadorAzul.PosicionFichaInicioY = poicionFicha.Location.Y;
                 JugadorAzul.Nombre = sender;
-                UnTurno.CambiarEstado();
+              
                 
             }
             

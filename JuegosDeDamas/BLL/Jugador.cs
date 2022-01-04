@@ -93,7 +93,7 @@ namespace BLL
 
         public bool FinalizarJuego(int fin)
         {
-            UnJugada.UnTurno.HoraFin = fin;
+           // UnJugada.UnTurno.HoraFin = fin;
             return true;
         }
 

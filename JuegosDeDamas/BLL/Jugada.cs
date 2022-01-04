@@ -12,19 +12,30 @@ namespace BLL
         private Turno _turno;
 
 
-        public Turno UnTurno
+        public int UnTurno
         {
-            get { return _turno; }
-            set { _turno = value; }
+            get { return _turno.Estado; }
+            set { _turno.Estado = value; }
         }
 
-        public bool MovimientoEstado
+        public bool Movimientoestado
         {
             get { return _movimientoEstado; }
             set { _movimientoEstado = value; }
         }
 
+        public bool MovimientoEstado(int turno, int fichaX,int fichaY,int casillaX,int casillaY)
+        {
+            bool salida = false;
+            if (fichaX > casillaX)
+            {
+                salida = true;
+            }
 
-        
+            return salida;
+        }
+
+
+
     }
 }
