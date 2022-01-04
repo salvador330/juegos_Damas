@@ -28,6 +28,7 @@ namespace JuegosDeDamas
         
 
         PictureBox poicionFicha;
+        PictureBox posicioCasilla;
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -35,17 +36,23 @@ namespace JuegosDeDamas
 
             //debo validar si se puede mover la ficha
             label25.Text = UnTurno.Estado.ToString();
+            posicioCasilla = (PictureBox)sender;
+
 
             if (JuegoStart == true && UnTurno.IndicarEstado() == 1 && 
                 JugadorRojo.UnJugada.MovimientoEstado(UnTurno.Estado,JugadorRojo.PosicionFichaInicioX,
                 JugadorRojo.PosicionFichaInicioY,JugadorRojo.PosicionCasillaFinX,
                 JugadorRojo.PosicionCasillaFinY)==true)
             {
+                
 
+
+                JugadorRojo.PosicionCasillaFinX = posicioCasilla.Location.X;
+                JugadorRojo.PosicionCasillaFinY = posicioCasilla.Location.Y;
+
+
+                poicionFicha.Location = new Point(JugadorRojo.PosicionCasillaFinY, JugadorRojo.PosicionCasillaFinY);
                 UnTurno.CambiarEstado();
-
-                poicionFicha.Location = new Point(JugadorRojo.PosicionFichaInicioX, JugadorRojo.PosicionFichaInicioY);
-
             }
 
             else if (JuegoStart == true && UnTurno.IndicarEstado() == 2 &&
@@ -54,10 +61,11 @@ namespace JuegosDeDamas
                 JugadorAzul.PosicionCasillaFinY) == true)
             {
 
+                JugadorAzul.PosicionCasillaFinX = posicioCasilla.Location.X;
+                JugadorAzul.PosicionCasillaFinY = posicioCasilla.Location.Y;
+
+                poicionFicha.Location = new Point(JugadorAzul.PosicionCasillaFinX, JugadorAzul.PosicionCasillaFinY);
                 UnTurno.CambiarEstado();
-
-                poicionFicha.Location = new Point(JugadorAzul.PosicionFichaInicioX, JugadorAzul.PosicionFichaInicioY);
-
             }
 
         }
