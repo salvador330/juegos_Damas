@@ -24,10 +24,10 @@ namespace BLL
             set { _movimientoEstado = value; }
         }
 
-        public bool MovimientoEstado(int turno, int fichaX,int fichaY,int casillaX,int casillaY)
+        public bool MovimientoEstado(int turno, Jugador unjugador)
         {
             bool salida = false;
-            if (fichaX > casillaX)
+            if (unjugador.PosicionCasillaFinX!= unjugador.PosicionFichaInicioX)
             {
                 salida = true;
             }

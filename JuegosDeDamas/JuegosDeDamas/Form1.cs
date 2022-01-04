@@ -39,10 +39,9 @@ namespace JuegosDeDamas
             posicioCasilla = (PictureBox)sender;
 
 
+
             if (JuegoStart == true && UnTurno.IndicarEstado() == 1 && 
-                JugadorRojo.UnJugada.MovimientoEstado(UnTurno.Estado,JugadorRojo.PosicionFichaInicioX,
-                JugadorRojo.PosicionFichaInicioY,JugadorRojo.PosicionCasillaFinX,
-                JugadorRojo.PosicionCasillaFinY)==true)
+                JugadorRojo.UnJugada.MovimientoEstado(UnTurno.Estado,JugadorRojo)==true)
             {
                 
 
@@ -51,14 +50,12 @@ namespace JuegosDeDamas
                 JugadorRojo.PosicionCasillaFinY = posicioCasilla.Location.Y;
 
 
-                poicionFicha.Location = new Point(JugadorRojo.PosicionCasillaFinY, JugadorRojo.PosicionCasillaFinY);
+                poicionFicha.Location = new Point(JugadorRojo.PosicionCasillaFinX, JugadorRojo.PosicionCasillaFinY);
                 UnTurno.CambiarEstado();
             }
 
             else if (JuegoStart == true && UnTurno.IndicarEstado() == 2 &&
-                JugadorAzul.UnJugada.MovimientoEstado(UnTurno.Estado, JugadorAzul.PosicionFichaInicioX,
-                JugadorAzul.PosicionFichaInicioY, JugadorAzul.PosicionCasillaFinX,
-                JugadorAzul.PosicionCasillaFinY) == true)
+                JugadorAzul.UnJugada.MovimientoEstado(UnTurno.Estado, JugadorAzul) == true)
             {
 
                 JugadorAzul.PosicionCasillaFinX = posicioCasilla.Location.X;
