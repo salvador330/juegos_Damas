@@ -27,8 +27,12 @@ namespace BLL
         public bool MovimientoEstado(int turno, Jugador unjugador)
         {
             bool salida = false;
-            if (unjugador.PosicionCasillaFinX!= unjugador.PosicionFichaInicioX)
+            if (turno==1 && unjugador.PosicionCasillaFinX < unjugador.PosicionFichaInicioX)
             {
+                salida = true;
+            }
+            if(turno == 2 && unjugador.PosicionCasillaFinX > unjugador.PosicionFichaInicioX)
+             {
                 salida = true;
             }
 
