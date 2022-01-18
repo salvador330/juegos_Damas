@@ -38,16 +38,23 @@ namespace JuegosDeDamas
             label25.Text = UnTurno.Estado.ToString();
             posicioCasilla = (PictureBox)sender;
 
+            //obtenermos las posiciones de Casilla y Ficha
+            JugadorRojo.PosicionCasillaFinX = posicioCasilla.Location.X;
+            JugadorRojo.PosicionCasillaFinY = posicioCasilla.Location.Y;
+            JugadorAzul.PosicionCasillaFinX = posicioCasilla.Location.X;
+            JugadorAzul.PosicionCasillaFinY = posicioCasilla.Location.Y;
 
-
+            Console.WriteLine(UnTurno.Estado);
+            Console.WriteLine("ficha "+poicionFicha.Location.X + " " + poicionFicha.Location.Y);
+            Console.WriteLine("casilla " + posicioCasilla.Location.X + " " + posicioCasilla.Location.Y);
             if (JuegoStart == true && UnTurno.IndicarEstado() == 1 && 
                 JugadorRojo.UnJugada.MovimientoEstado(UnTurno.Estado,JugadorRojo)==true)
             {
                 
 
 
-                JugadorRojo.PosicionCasillaFinX = posicioCasilla.Location.X;
-                JugadorRojo.PosicionCasillaFinY = posicioCasilla.Location.Y;
+                //JugadorRojo.PosicionCasillaFinX = posicioCasilla.Location.X;
+                //JugadorRojo.PosicionCasillaFinY = posicioCasilla.Location.Y;
 
 
                 poicionFicha.Location = new Point(JugadorRojo.PosicionCasillaFinX, JugadorRojo.PosicionCasillaFinY);
@@ -58,8 +65,8 @@ namespace JuegosDeDamas
                 JugadorAzul.UnJugada.MovimientoEstado(UnTurno.Estado, JugadorAzul) == true)
             {
 
-                JugadorAzul.PosicionCasillaFinX = posicioCasilla.Location.X;
-                JugadorAzul.PosicionCasillaFinY = posicioCasilla.Location.Y;
+                //JugadorAzul.PosicionCasillaFinX = posicioCasilla.Location.X;
+                //JugadorAzul.PosicionCasillaFinY = posicioCasilla.Location.Y;
 
                 poicionFicha.Location = new Point(JugadorAzul.PosicionCasillaFinX, JugadorAzul.PosicionCasillaFinY);
                 UnTurno.CambiarEstado();
@@ -89,6 +96,9 @@ namespace JuegosDeDamas
             poicionFicha = (PictureBox)sender;
             label25.Text = UnTurno.Estado.ToString();
 
+           
+           
+
             if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
             {
                 //permitir mover las rojas
@@ -100,7 +110,7 @@ namespace JuegosDeDamas
          
                
             }
-            if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender) && JuegoStart == true)
+            else if (UnTurno.IndicarEstado()==2 && TocoFichaAzul(sender) && JuegoStart == true)
             {
                 //permite mover las azules
                 JugadorAzul.PosicionFichaInicioX = poicionFicha.Location.X;
