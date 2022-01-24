@@ -75,7 +75,9 @@ namespace JuegosDeDamas
                 label25.Text = UnTurno.TurnoString();
             }
             //tengo que hacer un if para verificar si se realizo un movimiento de ataque
-            //
+            //debo actualizar la matrix con los movimientos, para leer o modificar
+            //ejemplo JuegoStar=true && Turno=1 &&
+            //MovimientoAtaque(ficha,casilla)=true => se come la ficha central
         }
 
         private void button1_Click(object sender, EventArgs e)
