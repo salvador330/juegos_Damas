@@ -74,7 +74,8 @@ namespace JuegosDeDamas
                 UnTurno.CambiarEstado();
                 label25.Text = UnTurno.TurnoString();
             }
-
+            //tengo que hacer un if para verificar si se realizo un movimiento de ataque
+            //
         }
 
         private void button1_Click(object sender, EventArgs e)
