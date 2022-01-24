@@ -35,7 +35,8 @@ namespace JuegosDeDamas
             //realizo click sobre casilla 
 
             //debo validar si se puede mover la ficha
-            label25.Text = UnTurno.Estado.ToString();
+            //label25.Text = UnTurno.Estado.ToString();
+            label25.Text = UnTurno.TurnoString();
             posicioCasilla = (PictureBox)sender;
 
             //obtenermos las posiciones de Casilla y Ficha
@@ -59,6 +60,7 @@ namespace JuegosDeDamas
 
                 poicionFicha.Location = new Point(JugadorRojo.PosicionCasillaFinX, JugadorRojo.PosicionCasillaFinY);
                 UnTurno.CambiarEstado();
+                label25.Text = UnTurno.TurnoString();
             }
 
             else if (JuegoStart == true && UnTurno.IndicarEstado() == 2 &&
@@ -70,6 +72,7 @@ namespace JuegosDeDamas
 
                 poicionFicha.Location = new Point(JugadorAzul.PosicionCasillaFinX, JugadorAzul.PosicionCasillaFinY);
                 UnTurno.CambiarEstado();
+                label25.Text = UnTurno.TurnoString();
             }
 
         }
@@ -87,6 +90,7 @@ namespace JuegosDeDamas
             JugadorRojo.IniciarJuego();
             UnTurno.IniciarContador();
             JuegoStart = true;
+            label25.Text = UnTurno.TurnoString();
         }
 
         private void pictureBox65_MouseClick(object sender, MouseEventArgs e)
@@ -94,10 +98,10 @@ namespace JuegosDeDamas
             //realizo click sobre ficha
             //obtengo nombre de ficha picturebox seleccionado
             poicionFicha = (PictureBox)sender;
-            label25.Text = UnTurno.Estado.ToString();
+            //label25.Text = UnTurno.Estado.ToString();
+            label25.Text = UnTurno.TurnoString();
 
-           
-           
+
 
             if (UnTurno.IndicarEstado()==1 && TocoFichaRoja(sender) && JuegoStart==true)
             {

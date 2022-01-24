@@ -73,5 +73,21 @@ namespace BLL
             return Estado;
         }
 
+        public string TurnoString()
+        {
+            string resultado = "";
+            if (this.Estado==1)
+            {
+                resultado = "Rojo";
+            }
+            else if (this.Estado == 2)
+            {
+                resultado = "Azul";
+            }
+            
+
+            return resultado;
+        }
+
     }
 }
