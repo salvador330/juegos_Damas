@@ -41,21 +41,24 @@ namespace BLL
             return salida;
         }
         /// <summary>
-        /// Verifica si el movimiento de ataque es correcto
+        /// Verifica si el movimiento de ataque es correcto 
         /// </summary>
         /// <param name="jugador"></param>
         /// <param name="tablero"></param>
         /// <returns>
         /// si es correcto [posX] [posY] [1]
-        /// no es correcto [posX] [PosY] [0]
+        /// no es correcto [0] [0] [0]
         /// </returns>
-        public int[] MovimientoAtaque(Jugador jugador, Tablero tablero)
+        public int[] MovimientoAtaque(Jugador jugador, int jugadorFichaInicioX, int jugadorFichaInicioY, Tablero tablero)
         {
             int[] resulado = new int[3];
+
+            resulado[0] = 0;
+            resulado[1] = 0;
             resulado[2] = 0;
 
             //pasar sobre un adversario 
-            //verificar si no ahiga jugador en destino realiza la jugada de ataque
+            //verificar si no ahiga ficha en destino realiza la jugada de ataque
             //en +-70 tiene que aver un contrincante
 
             //Posicion tocada  matriz de casilla final
@@ -63,47 +66,46 @@ namespace BLL
             int YMatrizCasillFinY = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX, jugador.PosicionCasillaFinY)[1];
 
             //posicion en matriz contrincante izquieda
-            int XcontrincanteX = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX - 70, jugador.PosicionCasillaFinY)[0];
-            int YcontrincanteY = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX - 70, jugador.PosicionCasillaFinY)[1];
+            int XcontrincanteX = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX - 70, jugador.PosicionCasillaFinY-70)[0];
+            int YcontrincanteY = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX - 70, jugador.PosicionCasillaFinY-70)[1];
 
             //posicion en matriz contrincante derecha
-            int XcontrincanteXX = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX + 70, jugador.PosicionCasillaFinY)[0];
-            int YcontrincanteYY = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX + 70, jugador.PosicionCasillaFinY)[1];
+            int XcontrincanteXX = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX + 70, jugador.PosicionCasillaFinY-70)[0];
+            int YcontrincanteYY = tablero.MostrarPosicionTableroAmatriz(jugador.PosicionCasillaFinX + 70, jugador.PosicionCasillaFinY-70)[1];
 
-            if (Math.Abs(jugador.PosicionCasillaFinX - jugador.PosicionFichaInicioX) == 140 &&
-                tablero.EstaLibre(XMatrizCasillFinX, YMatrizCasillFinY) == true
-                )
+            if (Math.Abs(jugador.PosicionCasillaFinX - jugadorFichaInicioX) == 140 &&
+                tablero.EstaLibre(XMatrizCasillFinX, YMatrizCasillFinY) == true)
             {
 
-                if (tablero.MostrarMatriz()[XcontrincanteX, YcontrincanteY] == 2)
+                if (tablero.MostrarMatriz()[XcontrincanteX, YcontrincanteY] == 2) 
                 {
                     resulado[0] = XcontrincanteX;
                     resulado[1] = YcontrincanteY;
                     resulado[2] = 1;
                 }
-                else if (tablero.MostrarMatriz()[XcontrincanteXX, YcontrincanteYY] == 2)
+                if (tablero.MostrarMatriz()[XcontrincanteXX, YcontrincanteYY] == 2)
                 {
                     resulado[0] = XcontrincanteXX;
                     resulado[1] = YcontrincanteYY;
                     resulado[2] = 1;
                 }
             }
-            else if (Math.Abs(jugador.PosicionCasillaFinX - jugador.PosicionFichaInicioX) == 140 &&
-                 tablero.EstaLibre(XMatrizCasillFinX, YMatrizCasillFinY) == true)
-            {
-                if (tablero.MostrarMatriz()[XcontrincanteX, YcontrincanteY] == 1)
-                {
-                    resulado[0] = XcontrincanteX;
-                    resulado[1] = YcontrincanteY;
-                    resulado[2] = 1;
-                }
-                else if (tablero.MostrarMatriz()[XcontrincanteXX, YcontrincanteYY] == 1)
-                {
-                    resulado[0] = XcontrincanteXX;
-                    resulado[1] = YcontrincanteYY;
-                    resulado[2] = 1;
-                }
-            }
+            //else if (Math.Abs(jugador.PosicionCasillaFinX - jugador.PosicionFichaInicioX) == 140 &&
+            //     tablero.EstaLibre(XMatrizCasillFinX, YMatrizCasillFinY) == true)
+            //{
+            //    if (tablero.MostrarMatriz()[XcontrincanteX, YcontrincanteY] == 1)
+            //    {
+            //        resulado[0] = XcontrincanteX;
+            //        resulado[1] = YcontrincanteY;
+            //        resulado[2] = 1;
+            //    }
+            //    else if (tablero.MostrarMatriz()[XcontrincanteXX, YcontrincanteYY] == 1)
+            //    {
+            //        resulado[0] = XcontrincanteXX;
+            //        resulado[1] = YcontrincanteYY;
+            //        resulado[2] = 1;
+            //    }
+            //}
 
 
             return resulado;
