@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,13 +77,19 @@ namespace BLL
                 tablero.EstaLibre(XMatrizCasillFinX, YMatrizCasillFinY) == true)
             {
 
-                if (tablero.MostrarMatriz()[XcontrincanteX, YcontrincanteY] == 2) 
+                if (tablero.MostrarMatriz()[XcontrincanteX, YcontrincanteY] == 2 &&
+                    jugador.PosicionCasillaFinX >=209 &&
+                    jugador.PosicionCasillaFinX <= 699 &&
+                    jugadorFichaInicioY< jugador.PosicionCasillaFinY)
                 {
                     resulado[0] = XcontrincanteX;
                     resulado[1] = YcontrincanteY;
                     resulado[2] = 1;
                 }
-                if (tablero.MostrarMatriz()[XcontrincanteXX, YcontrincanteYY] == 2)
+                if (tablero.MostrarMatriz()[XcontrincanteXX, YcontrincanteYY] == 2 &&
+                    jugador.PosicionCasillaFinX >= 209 &&
+                    jugador.PosicionCasillaFinX <= 699 &&
+                    jugadorFichaInicioY < jugador.PosicionCasillaFinY)
                 {
                     resulado[0] = XcontrincanteXX;
                     resulado[1] = YcontrincanteYY;
