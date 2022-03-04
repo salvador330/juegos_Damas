@@ -93,21 +93,25 @@ namespace JuegosDeDamas
             //ejemplo JuegoStar=true && Turno=1 &&
             //MovimientoAtaque(ficha,casilla)=true => se come la ficha central
 
-            //obtengo la posicion temporal inicial de la ficha
-            TempFichaInicioXRojo = JugadorRojo.PosicionFichaInicioX;
-            TempFichaInicioYRojo = JugadorRojo.PosicionFichaInicioY;
-            TempFichaInicioXAzul = JugadorAzul.PosicionFichaInicioX;
-            TempFichaInicioYAzul = JugadorAzul.PosicionFichaInicioY;
-
-
+            //obtengo la posicion temporal inicial de la ficha cuando le corresponde el turno de cada jugador
+            if (UnTurno.IndicarEstado() == 1)
+            {
+                TempFichaInicioXRojo = JugadorRojo.PosicionFichaInicioX;
+                TempFichaInicioYRojo = JugadorRojo.PosicionFichaInicioY;
+            }
+            if (UnTurno.IndicarEstado() == 2)
+            {
+                TempFichaInicioXAzul = JugadorAzul.PosicionFichaInicioX;
+                TempFichaInicioYAzul = JugadorAzul.PosicionFichaInicioY;
+            }
             //al realizar el movimiento evaluo si puedo comer ficha
-             if (JuegoStart == true  &&
+             if (JuegoStart == true  && 
                 JugadorRojo.UnJugada.MovimientoAtaque(JugadorRojo, TempFichaInicioXRojo, TempFichaInicioYRojo, Untablero)[2] == 1)
             {
                // Console.WriteLine("rojo come " + JugadorRojo.UnJugada.MovimientoAtaque(JugadorRojo, TempFichaInicioXRojo, TempFichaInicioYRojo, Untablero));
                 FichasComidasporAzul++;
                 label5.Text = FichasComidasporAzul.ToString();
-                Console.WriteLine("A paso por aqui");
+                
                 //actualizo matriz
                 int x = JugadorRojo.UnJugada.MovimientoAtaque(JugadorRojo, TempFichaInicioXRojo, TempFichaInicioYRojo, Untablero)[0];
                 int y = JugadorRojo.UnJugada.MovimientoAtaque(JugadorRojo, TempFichaInicioXRojo, TempFichaInicioYRojo, Untablero)[1];
@@ -115,6 +119,12 @@ namespace JuegosDeDamas
                 
                 //implementar borrar o mover y desahabilitar picture box
                 BorrarFicha(x, y);
+
+                //desplaza la ficha a la poscion final luego de comer, actualizamos la matriz
+                poicionFicha.Location = new Point(JugadorRojo.PosicionCasillaFinX, JugadorRojo.PosicionCasillaFinY);
+                Untablero.ActualizarMatriz(JugadorRojo.PosicionCasillaFinX, JugadorRojo.PosicionCasillaFinY, 1);
+
+                Console.WriteLine("Paso por Rojo");
                 TempFichaInicioXRojo = 0;
                 TempFichaInicioYRojo = 0;
             }
@@ -129,7 +139,7 @@ namespace JuegosDeDamas
                 FichasComidasporRojo++;
                 label6.Text = FichasComidasporRojo.ToString();
 
-                Console.WriteLine("B paso por aqui");
+            
                 //actualizo matriz
                 int x = JugadorAzul.UnJugada.MovimientoAtaque(JugadorAzul, TempFichaInicioXAzul, TempFichaInicioYAzul, Untablero)[0];
                 int y = JugadorAzul.UnJugada.MovimientoAtaque(JugadorAzul, TempFichaInicioXAzul, TempFichaInicioYAzul, Untablero)[1];
@@ -137,6 +147,12 @@ namespace JuegosDeDamas
                 
                 //implementar borrar o mover y desahabilitar picture box
                 BorrarFicha(x, y);
+
+                //desplaza la ficha a la poscion final luego de comer, actualizamos la matriz
+                poicionFicha.Location = new Point(JugadorAzul.PosicionCasillaFinX, JugadorAzul.PosicionCasillaFinY);
+                Untablero.ActualizarMatriz(JugadorAzul.PosicionCasillaFinX, JugadorAzul.PosicionCasillaFinY, 2);
+
+                Console.WriteLine("Paso por Azul");
                 TempFichaInicioXAzul = 0;
                 TempFichaInicioYAzul = 0;
             }
@@ -289,9 +305,9 @@ namespace JuegosDeDamas
                 if (item.Location.X== posX && item.Location.Y== posY)
                 {
                     item.Visible = false;
-                    Console.WriteLine("- "+ posX + " "+ posY + " "+item.Name);
+                    //Console.WriteLine("- "+ posX + " "+ posY + " "+item.Name);
                 }
-                Console.WriteLine(item.Location.X + " - " + item.Location.Y + " --" + posX + posY);
+                //Console.WriteLine(item.Location.X + " - " + item.Location.Y + " --" + posX + posY);
             }
 
 
@@ -299,4 +315,3 @@ namespace JuegosDeDamas
 
     }
 }
-
